@@ -1,0 +1,22 @@
+[project]
+name = "vocpub-genericode"
+version = "0.1.0"
+description = "A small Python library supporting a Command Line Interface the converts RDF files conforming to the VocPub Profile of SKOS to Genericode and back."
+readme = "README.md"
+authors = [
+    { name = "Nicholas Car", email = "nick@kurrawong.ai" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "lxml>=5.3.0",
+    "pyshacl>=0.29.1",
+    "rich>=13.9.4",
+    "typer>=0.15.1",
+]
+
+[project.scripts]
+vpg = "vocpub_genericode.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
